@@ -1,3 +1,10 @@
+"""
+This is a simple script used to demonstrate the use of phyton and scipy odeint functions to simulate continuous time dynamic systems.
+
+based on http://scipy-cookbook.readthedocs.org/items/CoupledSpringMassSystem.html
+
+"""
+
 import numpy as np
 import ipywidgets 
 import matplotlib.pyplot as plt
@@ -6,6 +13,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 plt.ion()
+
 
 def f(x, t):
     """
