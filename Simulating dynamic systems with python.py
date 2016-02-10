@@ -7,7 +7,6 @@ from scipy.integrate import odeint
 
 plt.ion()
 
-
 def f(x, t):
     """
     Defines the differential equations for the dynamical system.
@@ -20,7 +19,6 @@ def f(x, t):
     #A = np.random.randn(n,n) # random matrix linear system 
     A = np.array([[-2,2],[-4,1]])# stable complex eigenvalues
     f = A @ x
-    
     return f
     
 # ODE solver parameters
