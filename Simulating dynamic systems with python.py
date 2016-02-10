@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 #import control
 from scipy.integrate import odeint
 
-plt.ion()
+#plt.ion()
 
 
 def f(x, t):
@@ -32,7 +32,7 @@ def f(x, t):
 # ODE solver parameters
 abserr = 1.0e-8
 relerr = 1.0e-6
-stoptime = 100.0
+stoptime = 20.0
 numpoints = 500
 
 # Create the time samples for the output of the ODE solver.
@@ -43,6 +43,8 @@ t = [stoptime * float(i) / (numpoints - 1) for i in range(numpoints)]
 x0 = np.array([0.5,5]) # initial condition
 # Call the ODE solver.
 x = odeint(f, x0, t, atol=abserr, rtol=relerr)
+
+#plt.close("all")
 
 plt.figure(1,figsize=(10, 4.5))
 plt.clf()
@@ -65,4 +67,4 @@ plt.ylabel('$x_2$',fontsize=label_font_size)
 plt.grid()
 plt.legend(fontsize=label_font_size,numpoints=1)
 plt.title('System trajectory')
-plt.show()
+#plt.show()
