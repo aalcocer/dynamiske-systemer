@@ -1,5 +1,4 @@
-% second order system
-
+% second order system init
 wn = 1; % natural frequency
 z = 0.5; % damping ratio
 K = 1; % gain
